@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>apiContacts</name>
+    </assembly>
+    <members>
+        <member name="M:apiContacts.Controllers.ContactsController.Crear(apiContacts.DTOs.ContactCrearDTO)">
+            <summary>
+            Crea un contacto nuevo. FirstName, LastName y Email son parametros obligatorios.
+            </summary>
+            <param name="_contactDTO">Recibe un objeto con los siguientes atributos: FirstName (string), LastName(string), 
+            Company(string), Email(string), PhoneNumber(string)</param>
+            <returns>Retorna el objeto enviado con la ID asignada.</returns>
+        </member>
+        <member name="M:apiContacts.Controllers.ContactsController.Actualizar(apiContacts.DTOs.ContactDTO)">
+            <summary>
+            Actualiza un contacto por ID. IdContact, FirstName, LastName y Email son parametros obligatorios.
+            </summary>
+            <param name="_contactDTO">Recibe un objeto con los siguientes atributos: IdContact(int), FirstName (string), LastName(string), 
+            Company(string), Email(string), PhoneNumber(string)</param>
+            <returns>204 No Content</returns>
+        </member>
+        <member name="M:apiContacts.Controllers.ContactsController.Eliminar(System.Int32)">
+            <summary>
+            Elimina Contacto por ID.
+            </summary>
+            <param name="IdContact">Recibe ID(int)</param>
+            <returns>204 No Content</returns>
+        </member>
+        <member name="M:apiContacts.Controllers.ContactsController.Lista(System.String,System.Int32,System.Int32)">
+            <summary>
+            Listado de Contactos por busqueda de Company.
+            </summary>
+            <param name="Company">Nombre de la empresa por buscar.</param>
+            <param name="ItemsPorPag">Cantidad de registros retornados por pagina.</param>
+            <param name="NroPag">numero de pagina requerida.</param>
+            <returns>Lista de contactos por pagina y cantidad de items indicados.</returns>
+        </member>
+        <member name="M:apiContacts.Controllers.ContactsController.GetContacto(System.Int32)">
+            <summary>
+            Recupera un contacto por ID
+            </summary>
+            <param name="IdContacto">(int) Recibe el ID del contacto a consultar.</param>
+            <returns>Retorna un objeto del tipo Contacto con todos sus atributos.</returns>
+        </member>
+    </members>
+</doc>
